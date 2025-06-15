@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.testdrawsurface.CustomView
+            android:id="@+id/customView"
+            android:layout_width="match_parent"
+            android:layout_height="369dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="-150dp"
+            tools:layout_editor_absoluteY="504dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-203dp"
+                tools:layout_editor_absoluteY="434dp">
+
+                <SeekBar
+                    android:id="@+id/redBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="255"
+                    android:progressBackgroundTint="#FF0000"
+                    android:progressTint="#FF0000"
+                    android:thumbTint="#FF0000" />
+
+                <SeekBar
+                    android:id="@+id/greenBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="255"
+                    android:progressBackgroundTint="#43FA00"
+                    android:progressTint="#43FA00"
+                    android:thumbTint="#43FA00" />
+
+                <SeekBar
+                    android:id="@+id/blueBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="255"
+                    android:progressBackgroundTint="#0360FF"
+                    android:progressTint="#0360FF"
+                    android:thumbTint="#0360FF" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pipet_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:onClick="PipetButton"
+                android:textSize="16sp"
+                app:icon="@drawable/pipetka"
+                app:iconTint="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/toggleFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/workbutton"
+        android:text="ToggleButton"
+        android:textColor="@color/white"
+        android:textOff="no fill"
+        android:textOn="FILL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/tetrisButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="TetrisButton"
+        android:text="games"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/workbutton"
+        android:onClick="ClearScreen"
+        android:text="Clear"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/toggleFill"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/resetButton23"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/workbutton"
+        android:onClick="ResetModeButton"
+        android:text="reset"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="ToTextButton"
+        android:text="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
